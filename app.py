@@ -8,42 +8,43 @@ Original file is located at
 """
 
 import numpy as np
+import pandas as pd
 from flask import Flask, request, jsonify, render_template
-import pickle
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 
 
 app = Flask(__name__)
-# prediction function 
-def ValuePredictor(to_predict_list): 
-	to_predict = np.array(to_predict_list).reshape(1,-1)
-	print(to_predict)
-	loaded_model = pickle.load(open("model.pkl", "rb")) 
-	result = loaded_model.predict(to_predict) 
-	return result[0] 
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-@app.route('/predict', methods = ['POST']) 
-def predict(): 
-	if request.method == 'POST': 
-		to_predict_list = request.form.to_dict()
-		to_predict_list = list(to_predict_list.values())
-		to_predict_list = to_predict_list[:-1]
-		to_predict_list=list(map(float, to_predict_list))
-		result = ValuePredictor(to_predict_list)		 
-		if int(result)== 1: 
-			prediction ='cancer'
-		else: 
-			prediction ='Income less that 50K'			
-		return render_template("index.html", prediction_text =prediction) 
+@app.route('/predict', methods=['POST'])
+def predict():
+    if request.method == 'POST':
+        to_predict_list = request.form.to_dict()
+        to_predict_list = list(to_predict_list.values())
+        to_predict_list = to_predict_list[:-1]
+        to_predict_list = list(map(float, to_predict_list))
+        data = pd.read_csv('Breast_cancer_data.csv')
+        features = data.iloc[:, :-1]
+        labels = data.iloc[:, -1]
+        features_train, features_test, labels_train, labels_test = train_test_split(
+            features, labels, test_size=0.1, random_state=45)
+        k_model = KNeighborsClassifier(n_neighbors=5)
+        k_model.fit(features_train, labels_train)
+        to_predict = np.array(to_predict_list).reshape(1, -1)
+        result = k_model.predict(to_predict)
+        print(result)
+        if int(result[0]) == 1:
+            prediction = 'cancer'
+        else:
+            prediction = 'Income less that 50K'
+        return render_template("index.html", prediction_text=prediction)
 
-
-    
-        
 
 if __name__ == "__main__":
     app.run(debug=True)
-
