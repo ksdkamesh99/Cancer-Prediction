@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cancer Prediction
+	</title>
+</head>
+<body>
+	<form method="POST" action="{{url_for('predict')}}">
+		<input type="text" name="mean_radius" placeholder="mean_radius"><br>
+		<input type="text" name="mean_texture" placeholder="mean_texture"><br>
+		<input type="text" name="mean_perimeter" placeholder="mean_perimeter"><br>
+		<input type="text" name="mean_area" placeholder="mean_area"><br>
+		<input type="text" name="mean_smoothness" placeholder="mean_smoothness"><br>
+		<input type="submit" name="submit"><br>
+		
+	</form>
+	<br><br>
+	{{prediction_text}}
+</body>
+</html>
