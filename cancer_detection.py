@@ -53,4 +53,4 @@ pickle.dump(k_model, open('model.pkl','wb'))
 
 model = pickle.load(open('model.pkl','rb'))
 
-model.predict(features_test)
+print(model.predict(features_test))
