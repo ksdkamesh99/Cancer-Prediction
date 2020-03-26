@@ -27,22 +27,20 @@ def predict():
     if request.method == 'POST':
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
-        to_predict_list = to_predict_list[:-1]
         to_predict_list = list(map(float, to_predict_list))
         data = pd.read_csv('Breast_cancer_data.csv')
         features = data.iloc[:, :-1]
         labels = data.iloc[:, -1]
-        features_train, features_test, labels_train, labels_test = train_test_split(
-            features, labels, test_size=0.1, random_state=45)
+        features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=0.1, random_state=45)
         k_model = KNeighborsClassifier(n_neighbors=5)
         k_model.fit(features_train, labels_train)
-        to_predict = np.array(to_predict_list).reshape(1, -1)
+        to_predict = np.array(to_predict_list).reshape(1,-1)
         result = k_model.predict(to_predict)
         print(result)
         if int(result[0]) == 1:
-            prediction = 'cancer'
+            prediction = 'It is Malignant Cancer which is dangerous.Go and Consult the doctor'
         else:
-            prediction = 'Income less that 50K'
+            prediction = 'It is not dangerous U are Safe'
         return render_template("index.html", prediction_text=prediction)
 
 
