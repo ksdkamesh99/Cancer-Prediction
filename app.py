@@ -13,7 +13,7 @@ import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+
 
 @app.route('/')
 def home():
@@ -24,20 +24,7 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    for x in request.form.values():
-        print(x)
-    int_features = [int(x) for x in request.form.values()]
-    int_features=int_features[:-1]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
-
-    output = round(prediction[0], 2)
-    if output==1:
-        return render_template('index.html', prediction_text='He is suffering with breast-cancer')
-    else:
-        return render_template('index.html', prediction_text='He is not suffering with breast-cancer')
-        
-
+    return render_template('index.html')
 if __name__ == "__main__":
     app.run(debug=True)
 
