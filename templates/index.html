@@ -402,12 +402,14 @@ footer p {
     <a name="about"></a>
     <div class="container-fluid">
       <div class="row text-center">
-        <img src="images/malignant-and-benign.jpg">
+        <img src="malignant-and-benign.png" width="800px" height="400px">
         
       </div>
     </div>
   </div>
 	<div class="container">
+		<h2>Fill The Form </h2>
+		<p style="color: red">*Description about each is given below</p>
   <form action="/predict" method="POST">
     <div class="row">
       <div class="col-25">
@@ -456,7 +458,9 @@ footer p {
   </form>
 </div>
 	<br><br>
+	<div class="jumbotron text-center" style="margin-bottom:0;background: green;color: white;">
 	{{prediction_text}}
+</div>
 	<div class="jumbotron text-center" style="margin-bottom:0">
   <p>Cancer May have started the fight,But I will finish it</p>
 </div>
