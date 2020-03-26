@@ -20,7 +20,6 @@ pypiwin32==223
 python-dateutil==2.8.1
 pyttsx3==2.71
 pytz==2019.3
-pywin32==227
 requests==2.23.0
 scikit-learn==0.22.2.post1
 scipy==1.4.1
