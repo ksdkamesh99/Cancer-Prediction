@@ -24,18 +24,11 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    for x in request.form.values():
-        print(x)
-    int_features = [x for x in request.form.values()]
-    int_features=int_features[:-1]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
+    return render_template('index.html')
 
-    output = round(prediction[0], 2)
-    if output==1:
-        return render_template('index.html', prediction_text='He is suffering with breast-cancer')
-    else:
-        return render_template('index.html', prediction_text='He is not suffering with breast-cancer')
+    
+
+    
         
 
 if __name__ == "__main__":
