@@ -21,6 +21,11 @@ def ValuePredictor(to_predict_list):
 	result = loaded_model.predict(to_predict) 
 	return result[0] 
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
 @app.route('/predict', methods = ['POST']) 
 def predict(): 
 	if request.method == 'POST': 
