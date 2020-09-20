@@ -7,9 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/163b859q167BRNMQAe4kMyiqeQJr4MQj4
 """
 
-import numpy as np
 import pandas as pd
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
