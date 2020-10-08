@@ -1,469 +1,489 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style type="text/css">
-	
-	* {
-  box-sizing: border-box;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-header {
-  background-color: #34262B;
-  background: url(https://picjumbo.imgix.net/HNCK7769.jpg?q=40&w=1650&sharp=30) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  
-}
-
-.more-space {
-  margin-bottom: 20%;
-}
-
-header h1 {
-  color: #34262B;
-  font-size: 150px;
-}
-
-h1 {
-  font-family: sans-serif;
-  font-size: 20px;
-}
-
-.break1, .break2, .contact h2, .contact h3, p, header h4 {
-  font-family: "Coming Soon", sans-serif;
-}
-
-.social-media {
-  margin-top: 7%;
-}
-
-.intro {
-  margin-top: 12%;
-}
-
-header h4 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.red {
-  color: #c1292e;
-  font-weight: bold;
-}
-/**Navbar customs**/
-
-nav ul li {
-  font-size: 17px;
-  font-family: "News Cycle";
-}
-
-.about-us a {
-  font-family: "News Cycle", serif;
-}
-
-.navbar-brand {
-  font-size: 25px;
-  font-family: "News Cycle";
-}
-
-.navbar-default {
-  background-color: #FDFFFC;
-  border: 0;
-}
-
-.navbar-default .navbar-brand {
-  margin-left: 5%;
-  color: #34262B;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #FDFFFC;
-  background-color: transparent;
-}
-
-.navbar-default .navbar-text {
-  color: #210A2A;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #210A2A;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #F9F2F6;
-  background-color: transparent;
-  border-bottom: 1px solid #F9F2F6;
-}
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #F9F2F6;
-  background-color: #e7e7e7;
-}
-
-.navbar-default .navbar-nav > .disabled > a,
-.navbar-default .navbar-nav > .disabled > a:hover,
-.navbar-default .navbar-nav > .disabled > a:focus {
-  color: #F9F2F6;
-  background-color: transparent;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: #ddd;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
-}
-
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #e7e7e7;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
-}
-
-.navbar-inner {
-  background: rgba(0, 0, 0, 0);
-}
-/**Navbar customs end**/
-/***Services***/
-
-.works {
-}
-
-.tabs {
-  background-color: #F26430;
-  border: 1px solid #210A20;
-}
-
-.works p {
-  margin-top: 10%;
-}
-
-.works h1 {
-  font-size: 100px;
-  margin-top: 7%;
-  margin-bottom: 5%;
-}
-
-.thumbnail {
-  margin-bottom: 12%
-}
-
-.thumbnail:hover {
-  -webkit-box-shadow: 2px 2px 2px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    2px 2px 2px 1px #ccc;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         2px 2px 2px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-}
-
-.space {
-  margin-bottom: 10%;
-}
-
-
-.break1 {
-  background: url(https://images.unsplash.com/photo-1432836431433-925d3cc0a5cd?fit=crop&fm=jpg&h=700&q=80&w=1050) center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.break2 {
-  background: url(https://unsplash.imgix.net/photo-1430760814266-9c81759e5e55?fit=crop&fm=jpg&h=750&q=75&w=1050) center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.break2 h3 {
-  color: #fff;
-  font-size: 70px;
-  margin-top: 15%;
-  margin-bottom: 15%;
-}
-
-.break1 h3 {
-  color: #fff;
-  font-size: 70px;
-  margin-top: 15%;
-  margin-bottom: 15%;
-}
-
-/**End of Services stylus***/
-/***About us****/
-
-.about-us {
-  background-color: #34262B;
-}
-
-.about-us h1 {
-  color: #C1292E;
-  font-size: 100px;
-  margin-top: 7%;
-}
-
-.about-us-p {
-  font-size: 20px;
-  color: #FDFFFC;
-  margin-left: 12%;
-  margin-right: 12%;
-  margin-top: 7%;
-  margin-bottom: 10%;
-}
-
-.descript {
-  margin-bottom: 15%;
-}
-
-.team {
-  margin-top: 25%;
-  border: 1px solid #FDFFFC;
-  padding: 20px 50px 20px 50px;
-  text-decoration: none;
-  color: #F9F2F6;
-}
-
-.team:hover {
-  text-decoration: none;
-  background: rgba(193, 41, 46, 0.4);
-  color: #F9F2F6;
-}
-/* Contact */
-
-.contact {
-  background-color: #c1292e;
-}
-
-.contact h1 {
-  font-size: 100px;
-  margin-top: 7%;
-}
-
-.social-media-row-1 {
-  margin-top: 10%;
-}
-
-.contact i {
-  font-size: 1000%;
-  padding: 20% 0% 20% 0%;
-}
-
-.contact .icon {
-  border: 1px solid black;
-}
-
-.icon a {
-  color: #fff;
-}
-
-.icon:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Footer */
-
-footer {
-  background-color: #34292b;
-}
-
-.go-up-icon i {
-  color: white;
-  font-size: 400%;
-  margin-top: 15%;
-  border: 1px solid white;
-  padding: 2% 4% 3% 4%;
-  border-radius: 10%;
-}
-
-.go-up-icon i:hover {
-  background-color: rgba(100, 100, 100, 0.3);
-}
-
-footer p {
-  color: white;
-  padding-top: 37%;
-}
-
-@media screen and (max-width: 500px) {
-  header h1, .about-us h1, .works h1, .contact h1 {
-    font-size: 50px;
-    margin-bottom: 15%;
-  }
-    
-  header h4 {
-    font-size: 20px;
-    margin-bottom: 15%;
-  }
-  
-  .about-us-p {
-    font-size: 14px;
-  }
-  
-  .contact i {
-    font-size: 500%;
-  }
-  
-  .intro {
-  margin-top: 50%;
-  }
-}
-
-</style>
-<title>Cancer Prediction</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    header {
+      background-color: #34262B;
+      background: url(https://picjumbo.imgix.net/HNCK7769.jpg?q=40&w=1650&sharp=30) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+    }
+
+    .more-space {
+      margin-bottom: 20%;
+    }
+
+    header h1 {
+      color: #34262B;
+      font-size: 150px;
+    }
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 20px;
+    }
+
+    .break1,
+    .break2,
+    .contact h2,
+    .contact h3,
+    p,
+    header h4 {
+      font-family: "Coming Soon", sans-serif;
+    }
+
+    .social-media {
+      margin-top: 7%;
+    }
+
+    .intro {
+      margin-top: 12%;
+    }
+
+    header h4 {
+      color: #fff;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .red {
+      color: #c1292e;
+      font-weight: bold;
+    }
+
+    /**Navbar customs**/
+
+    nav ul li {
+      font-size: 17px;
+      font-family: "News Cycle";
+    }
+
+    .about-us a {
+      font-family: "News Cycle", serif;
+    }
+
+    .navbar-brand {
+      font-size: 25px;
+      font-family: "News Cycle";
+    }
+
+    .navbar-default {
+      background-color: #FDFFFC;
+      border: 0;
+    }
+
+    .navbar-default .navbar-brand {
+      margin-left: 5%;
+      color: #34262B;
+    }
+
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus {
+      color: #FDFFFC;
+      background-color: transparent;
+    }
+
+    .navbar-default .navbar-text {
+      color: #210A2A;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+      color: #210A2A;
+    }
+
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>li>a:focus {
+      color: #F9F2F6;
+      background-color: transparent;
+      border-bottom: 1px solid #F9F2F6;
+    }
+
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:hover,
+    .navbar-default .navbar-nav>.active>a:focus {
+      color: #F9F2F6;
+      background-color: #e7e7e7;
+    }
+
+    .navbar-default .navbar-nav>.disabled>a,
+    .navbar-default .navbar-nav>.disabled>a:hover,
+    .navbar-default .navbar-nav>.disabled>a:focus {
+      color: #F9F2F6;
+      background-color: transparent;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: #ddd;
+    }
+
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+      background-color: #ddd;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #888;
+    }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+      border-color: #e7e7e7;
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:hover,
+    .navbar-default .navbar-nav>.open>a:focus {
+      color: #555;
+      background-color: #e7e7e7;
+    }
+
+    .navbar-inner {
+      background: rgba(0, 0, 0, 0);
+    }
+
+    /**Navbar customs end**/
+    /***Services***/
+
+    .works {}
+
+    .tabs {
+      background-color: #F26430;
+      border: 1px solid #210A20;
+    }
+
+    .works p {
+      margin-top: 10%;
+    }
+
+    .works h1 {
+      font-size: 100px;
+      margin-top: 7%;
+      margin-bottom: 5%;
+    }
+
+    .thumbnail {
+      margin-bottom: 12%
+    }
+
+    .thumbnail:hover {
+      -webkit-box-shadow: 2px 2px 2px 1px #ccc;
+      /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+      -moz-box-shadow: 2px 2px 2px 1px #ccc;
+      /* Firefox 3.5 - 3.6 */
+      box-shadow: 2px 2px 2px 1px #ccc;
+      /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    }
+
+    .space {
+      margin-bottom: 10%;
+    }
+
+
+    .break1 {
+      background: url(https://images.unsplash.com/photo-1432836431433-925d3cc0a5cd?fit=crop&fm=jpg&h=700&q=80&w=1050) center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .break2 {
+      background: url(https://unsplash.imgix.net/photo-1430760814266-9c81759e5e55?fit=crop&fm=jpg&h=750&q=75&w=1050) center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .break2 h3 {
+      color: #fff;
+      font-size: 70px;
+      margin-top: 15%;
+      margin-bottom: 15%;
+    }
+
+    .break1 h3 {
+      color: #fff;
+      font-size: 70px;
+      margin-top: 15%;
+      margin-bottom: 15%;
+    }
+
+    /**End of Services stylus***/
+    /***About us****/
+
+    .about-us {
+      background-color: #34262B;
+    }
+
+    .about-us h1 {
+      color: #C1292E;
+      font-size: 100px;
+      margin-top: 7%;
+    }
+
+    .about-us-p {
+      font-size: 20px;
+      color: #FDFFFC;
+      margin-left: 12%;
+      margin-right: 12%;
+      margin-top: 7%;
+      margin-bottom: 10%;
+    }
+
+    .descript {
+      margin-bottom: 15%;
+    }
+
+    .team {
+      margin-top: 25%;
+      border: 1px solid #FDFFFC;
+      padding: 20px 50px 20px 50px;
+      text-decoration: none;
+      color: #F9F2F6;
+    }
+
+    .team:hover {
+      text-decoration: none;
+      background: rgba(193, 41, 46, 0.4);
+      color: #F9F2F6;
+    }
+
+    /* Contact */
+
+    .contact {
+      background-color: #c1292e;
+    }
+
+    .contact h1 {
+      font-size: 100px;
+      margin-top: 7%;
+    }
+
+    .social-media-row-1 {
+      margin-top: 10%;
+    }
+
+    .contact i {
+      font-size: 1000%;
+      padding: 20% 0% 20% 0%;
+    }
+
+    .contact .icon {
+      border: 1px solid black;
+    }
+
+    .icon a {
+      color: #fff;
+    }
+
+    .icon:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Footer */
+
+    footer {
+      background-color: #34292b;
+    }
+
+    .go-up-icon i {
+      color: white;
+      font-size: 400%;
+      margin-top: 15%;
+      border: 1px solid white;
+      padding: 2% 4% 3% 4%;
+      border-radius: 10%;
+    }
+
+    .go-up-icon i:hover {
+      background-color: rgba(100, 100, 100, 0.3);
+    }
+
+    footer p {
+      color: white;
+      padding-top: 37%;
+    }
+
+    @media screen and (max-width: 500px) {
+
+      header h1,
+      .about-us h1,
+      .works h1,
+      .contact h1 {
+        font-size: 50px;
+        margin-bottom: 15%;
+      }
+
+      header h4 {
+        font-size: 20px;
+        margin-bottom: 15%;
+      }
+
+      .about-us-p {
+        font-size: 14px;
+      }
+
+      .contact i {
+        font-size: 500%;
+      }
+
+      .intro {
+        margin-top: 50%;
+      }
+    }
+  </style>
+  <title>Cancer Prediction</title>
 </head>
+
 <body>
-	<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>Predict the Tumour is Malignant or Benign</h1>
-  <p>Using Machine Learning</p> 
-</div>
-	
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <h1>Predict the Tumour is Malignant or Benign</h1>
+    <p>Using Machine Learning</p>
+  </div>
+
   <div class="about-us" id="startchange">
     <a name="about"></a>
     <div class="container-fluid">
       <div class="row text-center">
         <img src="../images/malignant-and-benign.jpg" width="800px" height="400px">
-        
       </div>
     </div>
   </div>
-	<div class="container">
-		<h2>Fill The Form </h2>
-		<p style="color: red">*Description about each is given below</p>
-  <form action="/predict" method="POST">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Mean Radius</label>
+  <div class="container">
+    <h2>Fill The Form </h2>
+    <p style="color: red">*Description about each is given below</p>
+    <form action="/predict" method="POST">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Mean Radius</label>
+        </div>
+        <div class="col-75">
+          <input required type="text" name="mean_radius" placeholder="Mean Radius">
+        </div>
       </div>
-      <div class="col-75">
-        <input type="text"  name="mean_radius" placeholder="Mean Radius">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Mean Texture</label>
+        </div>
+        <div class="col-75">
+          <input required type="text" name="mean_texture" placeholder="Mean Texture">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Mean Texture</label>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Mean Perimeter</label>
+        </div>
+        <div class="col-75">
+          <input required type="text" name="mean_perimeter" placeholder="Mean perimeter">
+        </div>
       </div>
-      <div class="col-75">
-        <input type="text"  name="mean_texture" placeholder="Mean Texture">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Mean Area</label>
+        </div>
+        <div class="col-75">
+          <input required type="text" name="mean_area" placeholder="Mean Area">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Mean Perimeter</label>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Mean Smoothness</label>
+        </div>
+        <div class="col-75">
+          <input required type="text" name="mean_smoothness" placeholder="Mean Smoothness">
+        </div>
       </div>
-      <div class="col-75">
-        <input type="text"  name="mean_perimeter" placeholder="Mean perimeter">
+
+      <div class="row">
+        <input required type="submit" value="Submit">
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Mean Area</label>
-      </div>
-      <div class="col-75">
-        <input type="text"  name="mean_area" placeholder="Mean Area">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Mean Smoothness</label>
-      </div>
-      <div class="col-75">
-        <input type="text"  name="mean_smoothness" placeholder="Mean Smoothness">
-      </div>
-    </div>
-    
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-</div>
-	<br><br>
-	<div class="jumbotron text-center" style="margin-bottom:0;background: green;color: white;">
-	{{prediction_text}}
-</div>
-	<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Cancer May have started the fight,But I will finish it</p>
-</div>
+    </form>
+  </div>
+  <br><br>
+  <div class="jumbotron text-center" style="margin-bottom:0;background: green;color: white;">
+    {{prediction_text}}
+  </div>
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Cancer May have started the fight,But I will finish it</p>
+  </div>
 
 </body>
+
 </html>
