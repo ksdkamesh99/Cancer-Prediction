@@ -383,7 +383,14 @@
     }
 
     #startchange img {
-      width: auto;
+      width: 100%;
+    }
+
+    /* Media queries to make image responsive in desktop mode. */
+    @media screen and (min-width:760px) {
+      #startchange img {
+        width: auto;
+      }
     }
 
     @media screen and (max-width: 500px) {
@@ -427,7 +434,9 @@
     <a name="about"></a>
     <div class="container-fluid">
       <div class="row text-center">
-        <img src="../images/malignant-and-benign.jpg" width="800px" height="400px">
+        <img
+          src="https://raw.githubusercontent.com/ksdkamesh99/Cancer-Prediction/master/images/malignant-and-benign.jpg"
+          width="800px" height="400px">
       </div>
     </div>
   </div>
